@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		2C98F31220CFB9EC0097A9C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F31120CFB9EC0097A9C4 /* AppDelegate.swift */; };
-		2C98F31420CFB9EC0097A9C4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F31320CFB9EC0097A9C4 /* ViewController.swift */; };
+		2C98F31420CFB9EC0097A9C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F31320CFB9EC0097A9C4 /* MainViewController.swift */; };
 		2C98F31720CFB9EC0097A9C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C98F31520CFB9EC0097A9C4 /* Main.storyboard */; };
-		2C98F31920CFB9EE0097A9C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C98F31820CFB9EE0097A9C4 /* Assets.xcassets */; };
 		2C98F31C20CFB9EE0097A9C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C98F31A20CFB9EE0097A9C4 /* LaunchScreen.storyboard */; };
+		2C98F32620CFBCB20097A9C4 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F32520CFBCB20097A9C4 /* Sensor.swift */; };
+		2C98F32820CFC78B0097A9C4 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F32720CFC78B0097A9C4 /* Result.swift */; };
+		2C98F32A20CFCC080097A9C4 /* RESTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F32920CFCC080097A9C4 /* RESTManager.swift */; };
+		2C98F32D20D020750097A9C4 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F32C20D020750097A9C4 /* Station.swift */; };
+		2C98F33220D0263E0097A9C4 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F33120D0263E0097A9C4 /* StationViewController.swift */; };
+		2C98F33420D04C2C0097A9C4 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F33320D04C2C0097A9C4 /* StationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2C98F30E20CFB9EC0097A9C4 /* Powietrze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Powietrze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C98F31120CFB9EC0097A9C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C98F31320CFB9EC0097A9C4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C98F31320CFB9EC0097A9C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2C98F31620CFB9EC0097A9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2C98F31820CFB9EE0097A9C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C98F31B20CFB9EE0097A9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C98F31D20CFB9EE0097A9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C98F32520CFBCB20097A9C4 /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		2C98F32720CFC78B0097A9C4 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		2C98F32920CFCC080097A9C4 /* RESTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTManager.swift; sourceTree = "<group>"; };
+		2C98F32C20D020750097A9C4 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		2C98F33120D0263E0097A9C4 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
+		2C98F33320D04C2C0097A9C4 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,59 @@
 		2C98F31020CFB9EC0097A9C4 /* Powietrze */ = {
 			isa = PBXGroup;
 			children = (
-				2C98F31120CFB9EC0097A9C4 /* AppDelegate.swift */,
-				2C98F31320CFB9EC0097A9C4 /* ViewController.swift */,
+				2C98F33620D04DF70097A9C4 /* View Controllers */,
+				2C98F33520D04DEE0097A9C4 /* REST */,
 				2C98F31520CFB9EC0097A9C4 /* Main.storyboard */,
-				2C98F31820CFB9EE0097A9C4 /* Assets.xcassets */,
+				2C98F32E20D022CA0097A9C4 /* Supporting Files */,
+			);
+			path = Powietrze;
+			sourceTree = "<group>";
+		};
+		2C98F32B20D0203E0097A9C4 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				2C98F32720CFC78B0097A9C4 /* Result.swift */,
+				2C98F32520CFBCB20097A9C4 /* Sensor.swift */,
+				2C98F32C20D020750097A9C4 /* Station.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		2C98F32E20D022CA0097A9C4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2C98F31120CFB9EC0097A9C4 /* AppDelegate.swift */,
 				2C98F31A20CFB9EE0097A9C4 /* LaunchScreen.storyboard */,
 				2C98F31D20CFB9EE0097A9C4 /* Info.plist */,
 			);
-			path = Powietrze;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2C98F33520D04DEE0097A9C4 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				2C98F32920CFCC080097A9C4 /* RESTManager.swift */,
+				2C98F32B20D0203E0097A9C4 /* JSON */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		2C98F33620D04DF70097A9C4 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C98F31320CFB9EC0097A9C4 /* MainViewController.swift */,
+				2C98F33720D04E070097A9C4 /* Stations */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2C98F33720D04E070097A9C4 /* Stations */ = {
+			isa = PBXGroup;
+			children = (
+				2C98F33120D0263E0097A9C4 /* StationViewController.swift */,
+				2C98F33320D04C2C0097A9C4 /* StationCell.swift */,
+			);
+			path = Stations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +178,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C98F31C20CFB9EE0097A9C4 /* LaunchScreen.storyboard in Resources */,
-				2C98F31920CFB9EE0097A9C4 /* Assets.xcassets in Resources */,
 				2C98F31720CFB9EC0097A9C4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,7 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C98F31420CFB9EC0097A9C4 /* ViewController.swift in Sources */,
+				2C98F31420CFB9EC0097A9C4 /* MainViewController.swift in Sources */,
+				2C98F32A20CFCC080097A9C4 /* RESTManager.swift in Sources */,
+				2C98F33420D04C2C0097A9C4 /* StationCell.swift in Sources */,
+				2C98F32620CFBCB20097A9C4 /* Sensor.swift in Sources */,
+				2C98F32820CFC78B0097A9C4 /* Result.swift in Sources */,
+				2C98F33220D0263E0097A9C4 /* StationViewController.swift in Sources */,
+				2C98F32D20D020750097A9C4 /* Station.swift in Sources */,
 				2C98F31220CFB9EC0097A9C4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,7 +341,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Powietrze/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Powietrze/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +359,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = Powietrze/Info.plist;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "Powietrze/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
