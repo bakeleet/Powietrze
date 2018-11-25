@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C534F8321AAC623008D1FA4 /* ReadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C534F8221AAC623008D1FA4 /* ReadingCell.swift */; };
+		2C534F8721AAEE5C008D1FA4 /* LocationMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C534F8621AAEE5C008D1FA4 /* LocationMetadata.swift */; };
 		2C98F31220CFB9EC0097A9C4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F31120CFB9EC0097A9C4 /* AppDelegate.swift */; };
-		2C98F31420CFB9EC0097A9C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F31320CFB9EC0097A9C4 /* MainViewController.swift */; };
+		2C98F31420CFB9EC0097A9C4 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F31320CFB9EC0097A9C4 /* MasterViewController.swift */; };
 		2C98F31720CFB9EC0097A9C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C98F31520CFB9EC0097A9C4 /* Main.storyboard */; };
 		2C98F31C20CFB9EE0097A9C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C98F31A20CFB9EE0097A9C4 /* LaunchScreen.storyboard */; };
 		2C98F32620CFBCB20097A9C4 /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F32520CFBCB20097A9C4 /* Sensor.swift */; };
@@ -17,12 +19,17 @@
 		2C98F32D20D020750097A9C4 /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F32C20D020750097A9C4 /* Station.swift */; };
 		2C98F33220D0263E0097A9C4 /* StationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F33120D0263E0097A9C4 /* StationViewController.swift */; };
 		2C98F33420D04C2C0097A9C4 /* StationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C98F33320D04C2C0097A9C4 /* StationCell.swift */; };
+		2CA6B92821A9A0E9006F136C /* RESTCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B92721A9A0E9006F136C /* RESTCache.swift */; };
+		2CA6B92A21A9C082006F136C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6B92921A9C082006F136C /* DetailViewController.swift */; };
+		2CF9E6EA21AAB73F00B3E921 /* PrimarySplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF9E6E921AAB73F00B3E921 /* PrimarySplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C534F8221AAC623008D1FA4 /* ReadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingCell.swift; sourceTree = "<group>"; };
+		2C534F8621AAEE5C008D1FA4 /* LocationMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMetadata.swift; sourceTree = "<group>"; };
 		2C98F30E20CFB9EC0097A9C4 /* Powietrze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Powietrze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C98F31120CFB9EC0097A9C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C98F31320CFB9EC0097A9C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2C98F31320CFB9EC0097A9C4 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		2C98F31620CFB9EC0097A9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2C98F31B20CFB9EE0097A9C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C98F31D20CFB9EE0097A9C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +39,9 @@
 		2C98F32C20D020750097A9C4 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		2C98F33120D0263E0097A9C4 /* StationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationViewController.swift; sourceTree = "<group>"; };
 		2C98F33320D04C2C0097A9C4 /* StationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationCell.swift; sourceTree = "<group>"; };
+		2CA6B92721A9A0E9006F136C /* RESTCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTCache.swift; sourceTree = "<group>"; };
+		2CA6B92921A9C082006F136C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2CF9E6E921AAB73F00B3E921 /* PrimarySplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimarySplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C534F8421AAD00F008D1FA4 /* Sensors */ = {
+			isa = PBXGroup;
+			children = (
+				2C98F31320CFB9EC0097A9C4 /* MasterViewController.swift */,
+				2C534F8521AAD02A008D1FA4 /* Readings */,
+			);
+			path = Sensors;
+			sourceTree = "<group>";
+		};
+		2C534F8521AAD02A008D1FA4 /* Readings */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6B92921A9C082006F136C /* DetailViewController.swift */,
+				2C534F8221AAC623008D1FA4 /* ReadingCell.swift */,
+			);
+			path = Readings;
+			sourceTree = "<group>";
+		};
 		2C98F30520CFB9EC0097A9C4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				2C98F32920CFCC080097A9C4 /* RESTManager.swift */,
+				2CA6B92721A9A0E9006F136C /* RESTCache.swift */,
 				2C98F32B20D0203E0097A9C4 /* JSON */,
 			);
 			path = REST;
@@ -104,7 +133,8 @@
 		2C98F33620D04DF70097A9C4 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2C98F31320CFB9EC0097A9C4 /* MainViewController.swift */,
+				2CF9E6E921AAB73F00B3E921 /* PrimarySplitViewController.swift */,
+				2C534F8421AAD00F008D1FA4 /* Sensors */,
 				2C98F33720D04E070097A9C4 /* Stations */,
 			);
 			path = "View Controllers";
@@ -115,6 +145,7 @@
 			children = (
 				2C98F33120D0263E0097A9C4 /* StationViewController.swift */,
 				2C98F33320D04C2C0097A9C4 /* StationCell.swift */,
+				2C534F8621AAEE5C008D1FA4 /* LocationMetadata.swift */,
 			);
 			path = Stations;
 			sourceTree = "<group>";
@@ -129,6 +160,7 @@
 				2C98F30A20CFB9EC0097A9C4 /* Sources */,
 				2C98F30B20CFB9EC0097A9C4 /* Frameworks */,
 				2C98F30C20CFB9EC0097A9C4 /* Resources */,
+				2C534F8921AB51CD008D1FA4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -185,19 +217,44 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C534F8921AB51CD008D1FA4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C98F30A20CFB9EC0097A9C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C98F31420CFB9EC0097A9C4 /* MainViewController.swift in Sources */,
+				2C98F31420CFB9EC0097A9C4 /* MasterViewController.swift in Sources */,
+				2CF9E6EA21AAB73F00B3E921 /* PrimarySplitViewController.swift in Sources */,
+				2C534F8721AAEE5C008D1FA4 /* LocationMetadata.swift in Sources */,
+				2C534F8321AAC623008D1FA4 /* ReadingCell.swift in Sources */,
 				2C98F32A20CFCC080097A9C4 /* RESTManager.swift in Sources */,
 				2C98F33420D04C2C0097A9C4 /* StationCell.swift in Sources */,
 				2C98F32620CFBCB20097A9C4 /* Sensor.swift in Sources */,
 				2C98F32820CFC78B0097A9C4 /* Result.swift in Sources */,
 				2C98F33220D0263E0097A9C4 /* StationViewController.swift in Sources */,
 				2C98F32D20D020750097A9C4 /* Station.swift in Sources */,
+				2CA6B92A21A9C082006F136C /* DetailViewController.swift in Sources */,
 				2C98F31220CFB9EC0097A9C4 /* AppDelegate.swift in Sources */,
+				2CA6B92821A9A0E9006F136C /* RESTCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,9 +9,9 @@
 import UIKit
 
 class StationCell: UITableViewCell {
-    var station: Station?
+    private(set) var station: Station?
 
-    func configure(station: Station) {
+    func configure(with station: Station) {
         self.station = station
         textLabel?.text = station.stationName
     }

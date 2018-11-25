@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 struct Result: Codable {
     let key: String
@@ -16,19 +15,6 @@ struct Result: Codable {
     struct Reading: Codable {
         let date: Date
         let value: Float?
-    }
-
-    func getResultWithLatestDate() -> Result {
-        var readingWithoutNils = values.filter { (reading: Reading) -> Bool in
-            return reading.value != nil
-        }
-        var latestReading = Reading(date: Date(), value: 0.0)
-        if readingWithoutNils.count > 0 {
-            latestReading = readingWithoutNils.reduce(readingWithoutNils[0], {
-                $0.date.timeIntervalSinceReferenceDate > $1.date.timeIntervalSinceReferenceDate ? $0 : $1
-            })
-        }
-        return Result(key: key, values: [latestReading])
     }
 
     func getAddmisibleLevel() -> Float {
@@ -51,4 +37,12 @@ struct Result: Codable {
             return -Float.infinity
         }
     }
+}
+
+extension DateFormatter {
+    static let giosGovFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return formatter
+    }()
 }

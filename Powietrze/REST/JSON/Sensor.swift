@@ -9,6 +9,7 @@
 import Foundation
 
 struct Sensor: Codable {
+    // swiftlint:disable identifier_name
     let id: Int
     let stationId: Int
     let param: SensorParam

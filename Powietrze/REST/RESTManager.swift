@@ -11,57 +11,69 @@ import Foundation
 class RESTManager {
     static let sharedInstance = RESTManager()
 
+    private var cache = RESTCache()
+
     func getAllStations(onSuccess: @escaping([Station]) -> Void, onFailure: @escaping(String) -> Void) {
         let url = "http://api.gios.gov.pl/pjp-api/rest/station/findAll"
-        self.getDataWith(url, type: [Station].self, onSuccess: onSuccess, onFailure: onFailure)
+        getDataWith(url, type: [Station].self, onSuccess: onSuccess, onFailure: onFailure)
     }
 
-    func getSensorsWith(id: Int, onSuccess: @escaping([Sensor]) -> Void, onFailure: @escaping(String) -> Void) {
-        let url = "http://api.gios.gov.pl/pjp-api/rest/station/sensors/\(id)"
-        self.getDataWith(url, type: [Sensor].self, onSuccess: onSuccess, onFailure: onFailure)
+    func getSensorsOn(_ stationId: Int, onSuccess: @escaping([Sensor]) -> Void, onFailure: @escaping(String) -> Void) {
+        let url = "http://api.gios.gov.pl/pjp-api/rest/station/sensors/\(stationId)"
+        getDataWith(url, type: [Sensor].self, onSuccess: onSuccess, onFailure: onFailure)
     }
 
-    func getResultsWith(sensorId: Int, onSuccess: @escaping(Result) -> Void, onFailure: @escaping(String) -> Void) {
+    func getResultsFrom(_ sensorId: Int, onSuccess: @escaping(Result) -> Void, onFailure: @escaping(String) -> Void) {
         let url = "http://api.gios.gov.pl/pjp-api/rest/data/getData/\(sensorId)"
-        self.getDataWith(url, type: Result.self, onSuccess: onSuccess, onFailure: onFailure)
+        getDataWith(url, type: Result.self, onSuccess: onSuccess, onFailure: onFailure)
     }
 
-    func getDataWith<T>(_ url: String,
-                        type: T.Type,
-                        onSuccess: @escaping(T) -> Void,
-                        onFailure: @escaping(String) -> Void) where T: Decodable {
-        guard let resultUrl = URL(string: url) else {
+    private func getDataWith<T>(_ url: String,
+                                type: T.Type,
+                                onSuccess: @escaping(T) -> Void,
+                                onFailure: @escaping(String) -> Void) where T: Decodable {
+
+        if let response = cache.getRecentResponse(from: url) as? T {
+            onSuccess(response)
+        } else {
+            networkCall(url, type: type, onSuccess: onSuccess, onFailure: onFailure)
+        }
+    }
+
+    private func networkCall<T>(_ url: String,
+                                type: T.Type,
+                                onSuccess: @escaping(T) -> Void,
+                                onFailure: @escaping(String) -> Void) where T: Decodable {
+
+        guard let resultUrl = URL(string: url)
+        else {
             onFailure("Cannot process url: \(url)")
             return
         }
 
         URLSession.shared.dataTask(with: resultUrl) { (data, response, error) in
-            guard error == nil else {
+            guard error == nil
+            else {
                 onFailure("DataTask failed with: \(String(describing: error))")
                 return
             }
 
-            guard let data = data else {
+            guard let data = data
+            else {
                 onFailure("No data for url: \(url)")
                 return
             }
 
             do {
                 let decoder = JSONDecoder()
-                decoder.dateDecodingStrategy = .formatted(DateFormatter.myFormatter)
+                decoder.dateDecodingStrategy = .formatted(DateFormatter.giosGovFormat)
                 let results = try decoder.decode(type, from: data)
+
+                self.cache.add(response: results, from: url)
                 onSuccess(results)
             } catch let err {
                 onFailure("JSON decoding: \(err)")
             }
         }.resume()
     }
-}
-
-extension DateFormatter {
-    static let myFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        return formatter
-    }()
 }

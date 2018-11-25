@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aFa-c5-tgB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rzL-ax-dct">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!-- -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title=" " id="BYZ-38-t0r" customClass="MainViewController" customModule="Powietrze" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title=" " id="BYZ-38-t0r" customClass="MasterViewController" customModule="Powietrze" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,22 +135,15 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="reading" textLabel="DMd-cj-P7K" detailTextLabel="83z-Km-0xF" style="IBUITableViewCellStyleValue1" id="WeG-z6-cIf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sensor" textLabel="DMd-cj-P7K" style="IBUITableViewCellStyleDefault" id="WeG-z6-cIf">
                                         <rect key="frame" x="0.0" y="275.5" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WeG-z6-cIf" id="NYD-ZU-OZe">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DMd-cj-P7K">
-                                                    <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="83z-Km-0xF">
-                                                    <rect key="frame" x="316" y="12" width="44" height="20.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="325" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -158,6 +151,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="J2P-Pr-6Nj" kind="showDetail" identifier="showReadings" id="X4v-zv-Tyx"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -176,10 +172,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZcZ-we-lox">
+                    <navigationItem key="navigationItem" title="gios.gov.pl" id="ZcZ-we-lox">
                         <barButtonItem key="rightBarButtonItem" title="Wybierz stację" id="mgf-ga-C6O">
                             <connections>
-                                <segue destination="Slh-eb-Wqc" kind="presentation" modalTransitionStyle="flipHorizontal" id="cdU-eH-ctA"/>
+                                <action selector="getBackToStationsButton:" destination="BYZ-38-t0r" id="gqC-Kv-FXp"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -190,6 +186,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="93.103448275862078"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="DAi-dU-W78">
+            <objects>
+                <tableViewController id="J2P-Pr-6Nj" customClass="DetailViewController" customModule="Powietrze" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6E1-zU-5ae">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reading" textLabel="b7f-tb-rPv" detailTextLabel="KvW-JK-Bjk" style="IBUITableViewCellStyleValue1" id="M1B-nZ-B9X" customClass="ReadingCell" customModule="Powietrze" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="M1B-nZ-B9X" id="Ptc-iC-N94">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7f-tb-rPv">
+                                            <rect key="frame" x="16" y="12" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KvW-JK-Bjk">
+                                            <rect key="frame" x="315" y="12" width="44" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="J2P-Pr-6Nj" id="m9B-8S-B6e"/>
+                            <outlet property="delegate" destination="J2P-Pr-6Nj" id="xpz-h2-Ft6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="i82-9f-p85"/>
+                    <connections>
+                        <outlet property="tableView" destination="6E1-zU-5ae" id="Z2G-6g-oZN"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZe-vo-a9R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="891.90404797601207"/>
+        </scene>
+        <!--Primary Split View Controller-->
+        <scene sceneID="uV0-5T-OO0">
+            <objects>
+                <splitViewController id="XnZ-mg-i6Z" customClass="PrimarySplitViewController" customModule="Powietrze" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="aFa-c5-tgB" kind="relationship" relationship="masterViewController" id="rt9-xy-dKv"/>
+                        <segue destination="J2P-Pr-6Nj" kind="relationship" relationship="detailViewController" id="ChD-Pa-qQh"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PpW-G2-KOx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-753" y="480"/>
         </scene>
         <!--Station View Controller-->
         <scene sceneID="WfR-UH-H7r">
@@ -207,6 +264,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="XnZ-mg-i6Z" kind="show" id="LXO-Pt-ydS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -214,17 +274,13 @@
                             <outlet property="delegate" destination="rzL-ax-dct" id="qsr-ri-KGz"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="kk0-Xm-s4s">
-                        <barButtonItem key="leftBarButtonItem" title="Powrót" id="PNQ-hQ-Wnm">
-                            <connections>
-                                <action selector="backButton:" destination="rzL-ax-dct" id="rT6-2S-bHO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="plc-FP-4Qc" id="bd8-Wl-vMx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAk-ef-EUH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2928.8000000000002" y="93.103448275862078"/>
+            <point key="canvasLocation" x="-1689" y="480"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KR2-VY-Zg3">
@@ -244,23 +300,8 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="93.103448275862078"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="tkW-ol-NDG">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Slh-eb-Wqc" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fsq-6X-oam">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="rzL-ax-dct" kind="relationship" relationship="rootViewController" id="yez-fl-uOH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Zr-HL-lIR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1989.5999999999999" y="92.203898050974516"/>
-        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="X4v-zv-Tyx"/>
+    </inferredMetricsTieBreakers>
 </document>
